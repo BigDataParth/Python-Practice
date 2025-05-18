@@ -1,0 +1,75 @@
+Excellent question. You should **only add the files that have changed or are new**, not everything every day — this is a best practice and keeps your Git history clean.
+
+---
+
+## ✅ Daily Git Update (Only for New or Changed Files)
+
+Let’s say you worked on `2025-05-17.py` today. Here’s your minimal workflow:
+
+### 🔹 1. Go to your practice folder:
+
+```bash
+cd /Users/parth/python-practice/
+```
+
+---
+
+### 🔹 2. Check which files changed:
+
+```bash
+git status
+```
+
+You’ll see something like:
+
+```
+modified:   2025-05-17.py
+untracked files:
+  2025-05-18.py
+```
+
+---
+
+### 🔹 3. Add only the changed/new files:
+
+```bash
+git add 2025-05-17.py 2025-05-18.py
+```
+
+You can also add all changed files **in one go** using:
+
+```bash
+git add .
+```
+
+> Use `.` only if you're sure you want to add **everything** in the folder (modified + new).
+
+---
+
+### 🔹 4. Commit with a clear message:
+
+```bash
+git commit -m "Add 2025-05-18.py and update 2025-05-17.py"
+```
+
+---
+
+### 🔹 5. Push changes to GitHub:
+
+```bash
+git push
+```
+
+---
+
+## ✅ Pro Tip (Optional): Check what's changed before adding
+
+To view changes before committing:
+
+```bash
+git diff 2025-05-17.py
+```
+
+---
+
+Would you like a **bash script** that automates this daily update with date-based commit messages?
